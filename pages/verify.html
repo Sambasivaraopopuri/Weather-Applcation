@@ -1,0 +1,48 @@
+{%extends 'navbar.html'%}
+{%block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4">
+            <div class="form-control">
+                <form action="" method="post">{%csrf_token%}
+                    <p align="center" style="background-color: yellow;" class="form-control"><label for="verif" >ENter Verification Code</label></p>
+                    <input type="text" name="verify" id="verify" class="form-control">
+                    <br>
+                    <p align="right"><input type="submit" value="Submit" class="btn btn-outline-primary"></p>
+                </form>
+                {%if msg1%}
+                <div class="alert alert-primary" role="alert">
+                    <p align="center"><a href="{%url 'login'%}" style="text-decoration: None;">{{msg1}}</a></p>
+                  </div>
+                {%endif%}
+                {%if msg2%}
+                <div class="alert alert-danger" role="alert">
+                    {{msg2}}
+                  </div>
+                {%endif%}
+                {%if msg3%}
+                <div class="alert alert-danger" role="alert">
+                    {{msg3}}
+                  </div>
+                {%endif%}
+                {%if msg4%}
+                <div class="alert alert-danger" role="alert">
+                    {{msg4}}
+                  </div>
+                {%endif%}
+            </div>
+        </div>
+        <div class="col-sm-4">
+
+        </div>
+    </div>
+</div>
+{%endblock%}
