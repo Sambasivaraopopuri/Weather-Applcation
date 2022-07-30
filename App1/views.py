@@ -47,7 +47,7 @@ def register(request):
                         """.format(user,email_code)
             s = smtplib.SMTP('smtp.gmail.com', 587)
             s.starttls()
-            s.login("samba01.sp@gmail.com", "zaihoatvgapnjeqt")
+            s.login("email", "password")
             s.sendmail('&&&&&&&&&&&', send_email, message)
             msg="Done"
             
@@ -73,7 +73,7 @@ def verifiy(request,id):
                         """.format(register.name,register.email,"Weather Application/login")
                     s = smtplib.SMTP('smtp.gmail.com', 587)
                     s.starttls()
-                    s.login("samba01.sp@gmail.com", "zaihoatvgapnjeqt")
+                    s.login("email", "password")
                     s.sendmail('&&&&&&&&&&&', register.email, message)
                     return render(request,"verify.html",{"msg1":" Next..","name":register.name})
                 else:
