@@ -128,7 +128,7 @@ def home(request):
             city=request.session['city']
             # data={"data":[{"rh":45.1875,"pod":"d","lon":80.3097,"pres":997,"timezone":"Asia\/Kolkata","ob_time":"2022-06-28 08:47","country_code":"IN","clouds":94,"ts":1656406066,"solar_rad":299.3,"state_code":"02","city_name":"Phirangipuram","wind_spd":5.27587,"wind_cdir_full":"west","wind_cdir":"W","slp":1002.5,"vis":16,"h_angle":12.9,"sunset":"13:13","dni":888.78,"dewpt":20,"snow":0,"uv":2.84887,"precip":0,"wind_dir":280,"sunrise":"00:07","ghi":850.73,"dhi":116.09,"aqi":27,"lat":16.2123,"weather":{"icon":"c04d","code":804,"description":"Overcast clouds"},"datetime":"2022-06-28:08","temp":33.3,"station":"VOBZ","elev_angle":56.63,"app_temp":35.5}],"count":1}
             # list_data.append(123)
-            json_data=requests.get("https://api.weatherbit.io/v2.0/current?postal_code="+request.session['zipcode']+"&include=minutely&marine=t&units=S&key=2b61f7e5834547f7bbbd59c7805b2dfc")
+            json_data=requests.get("api_url")
             data=json_data.json()
             # print(data["data"])
             temp=[] 
